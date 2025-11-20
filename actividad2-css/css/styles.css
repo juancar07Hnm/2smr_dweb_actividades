@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #076896;
+    --primary-color_transparencia: #06789666;
+    --boton_activo: #004466;
+
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.4;
@@ -45,3 +52,35 @@ section h2{
     margin-bottom: 0.5rem;
 }
 
+/*Psedoclases*/
+.btn, .btn-sec {
+    /*border: 2px solid #006699;*/
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: white;
+    padding: 0.4rem 0.8rem;
+    margin:0.3rem 0.3rem 0.6rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover, .btn-sec:hover {
+    background-color: var(--primary-color_transparencia);
+    transition: background-color 0.5s;
+}
+
+.btn:hover, .btn-sec:active {
+    background-color: var(--boton_activo);
+}
+
+input {
+    border: 1px solid #999;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: 1px solid var(--primary-color);
+}
