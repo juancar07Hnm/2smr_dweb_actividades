@@ -165,7 +165,7 @@ solo esquina superior derecha redondeada (16px).*/
 
 .b2 {
     background-color: #ffcc66;
-    border-radius: 0 16px 0 0;
+    border-top-right-radius: 16px;
 }
 /*- .b3 → fondo verde claro (#99cc99), 
 todas las esquinas redondeadas (16px).*/
@@ -179,4 +179,18 @@ todas las esquinas redondeadas (16px).*/
     content: "";
     display: block;
     clear: both;
+}
+
+/*TExto alianeado en el centro 
+fondo claro
+borde superior
+letras más pequeña que la original*/
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #eee;
+    padding: 1rem;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 8px 8px 0 0;
 }
