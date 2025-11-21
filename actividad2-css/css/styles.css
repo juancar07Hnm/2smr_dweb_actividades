@@ -2,6 +2,10 @@
     --primary-color: #076896;
     --primary-color_transparencia: #06789666;
     --boton_activo: #004466;
+    --clor-fondo_caja: #eaf6fb;
+    --color-borde-caja: #006699;
+    --color-secundario: #f0fff0;
+    --color-borde-redondeado: #333;
 
 }
 
@@ -83,4 +87,96 @@ input {
 
 input:focus {
     outline: 1px solid var(--primary-color);
+}
+
+/*Estilos para la lista*/
+.lista-demo {
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+}
+
+.lista-demo li {
+    margin: 0.2rem 0;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.lista-demo li:first-child {
+    font-weight: bold;
+    color: var(--boton_activo);
+    opacity: 1;
+}
+
+.lista-demo li:hover {
+    opacity: 1;
+}
+/*caja (.caja):
+fondo azul claro (#)*/
+
+.caja {
+    background-color: var(--clor-fondo_caja);
+    border: 2px solid var(--color-borde-caj);
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/*Span que es hijo directo */
+
+#contenedor > span {
+    background-color: var(--clor-fondo_caja);
+    border: 1px solid var(--color-borde-caja);
+    padding: 0.3rem;
+    margin-bottom: 1.3rem;
+}
+
+#contenedor +p {
+    background-color: var(--color-secundario);
+    border-left: 4px solid green;
+    padding-left: 0.4rem;
+}
+
+/*Aplicar estilos comunes a las cajas
+Tamaño: ancho 100px,
+Alto 80px,
+borde 3px solido #333,
+texto centrado vertical y horizontal.*/
+
+.box {
+    float: left;
+    width: 100px;
+    height: 80px;
+    border: 3px solid var(--color-borde-redondeado);
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/*b1 → fondo rojo claro (#ff9999), solo esquina superior izquierda 
+redondeada (16px).*/
+
+.b1 {
+    background-color: #ff9999;
+    border-radius: 16px 0 0 0;
+}
+/*- .b2 → fondo amarillo (#ffcc66), 
+solo esquina superior derecha redondeada (16px).*/
+
+.b2 {
+    background-color: #ffcc66;
+    border-radius: 0 16px 0 0;
+}
+/*- .b3 → fondo verde claro (#99cc99), 
+todas las esquinas redondeadas (16px).*/
+
+.b3 {
+    background-color: #99cc99;
+    border-radius: 16px;
+}
+
+.fila::after {
+    content: "";
+    display: block;
+    clear: both;
 }
