@@ -1,0 +1,69 @@
+/*IMportamos fuente Audiowide de google api */
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+:root {
+    --color_fondo_principal: #f3fdbc;
+    --color_fondo_menu_nav: #f1b4b8;
+    --color_titulo: #2d07fb;
+    --color_borde_discontinuo: #ff9e26
+}
+
+header, main, footer {
+    margin: 0 10px;
+}
+
+body {
+    /*Las propiedades width y heigth incluyen el borde y relleno.*/
+    box-sizing: border-box;
+    background-color: var(--color_fondo_principal);
+
+    /*Para centrar contenedores en las página horizontalmente*/
+    text-align: center;
+}
+header h1 {
+    font-family: Audiowide;
+}
+
+p {
+    font-family: Arial;
+}
+
+/*Menú de navegación*/ 
+
+header nav {
+    background-color: var(--color_fondo_menu_nav);
+}
+
+header nav ul {
+    padding-left: 20px;
+    /*Cambia de relleno de bloque lista*/
+}
+
+header nav li {
+    /*Quitamos el punto de la viñeta*/
+    list-style-type: none;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0;
+    padding: 16px 0 16px 8px;
+}
+
+/*Enlaces de la barra de navegación sin subrayar*/
+header nav a {
+    /*Enlaces sin subrayar*/
+    text-decoration: none;
+}
+
+/*GEnerar un bloque invisible para cortar */
+
+header nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#destacado {
+    /*borde lineas discontinuas color naranja*/
+    border-style: dashed;
+    border-color: var(--color_borde_discontinuo);
+}
