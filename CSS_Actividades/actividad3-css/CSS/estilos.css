@@ -5,7 +5,10 @@
     --color_fondo_principal: #f3fdbc;
     --color_fondo_menu_nav: #f1b4b8;
     --color_titulo: #2d07fb;
-    --color_borde_discontinuo: #ff9e26
+    --color_borde_discontinuo: #ff9e26;
+    --color_fondo_borde: #fceac8;
+    --color_fondo_enlace_selec: #eeeeee;
+    --color_enlace_selec: #ff0000;
 }
 
 header, main, footer {
@@ -22,6 +25,7 @@ body {
 }
 header h1 {
     font-family: Audiowide;
+    color: var(--color_titulo);
 }
 
 p {
@@ -35,7 +39,7 @@ header nav {
 }
 
 header nav ul {
-    padding-left: 20px;
+    padding-left: 0px;
     /*Cambia de relleno de bloque lista*/
 }
 
@@ -43,9 +47,15 @@ header nav li {
     /*Quitamos el punto de la viñeta*/
     list-style-type: none;
     float: left;
-    margin-right: 20px;
     margin-left: 0;
-    padding: 16px 0 16px 8px;
+    padding: 16px 0px 16px 20px;
+}
+
+header nav li:hover {
+    /*Cambios de fondo y color de fuente cuando pasa el cursor por encima*/
+    background-color: var(--color_fondo_enlace_selec);
+    color: var(--color_enlace_selec);
+    transition: background-color 0.8s;
 }
 
 /*Enlaces de la barra de navegación sin subrayar*/
@@ -66,4 +76,34 @@ header nav::after {
     /*borde lineas discontinuas color naranja*/
     border-style: dashed;
     border-color: var(--color_borde_discontinuo);
+    padding: 10px;
+    background-color: var(--color_fondo_borde);
+}
+
+.centrado {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    margin-bottom: 20px;
+}
+
+.caja {
+   border: 2px solid var(--color_titulo);
+    padding: 10px 8px 10px 8px;
+    width: 30%; 
+    background-color: var(--color_fondo_principal);
+}
+
+/*Pseudoselector: primer párrafo dentro de .caja */
+
+.centrado .caja:first-child p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*Segundo párrafo dentro de la caja */
+
+.centrado .caja:first-child p:nth-of-type(2) {
+    clear: both;
+    padding: 5px;
 }
