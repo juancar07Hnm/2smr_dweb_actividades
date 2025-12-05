@@ -1,0 +1,25 @@
+:root {
+    --pading-container: 50px 0; /* Variable para padding vertical */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* El borde cuenta dentro del tamaño total */
+}
+
+.mi_contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar horizontalmente */
+    overflow: hidden; /* Esconde lo que se salga */
+    padding: var(--pading-container); /* Usamos la variable de arriba */
+}
+
+.mi_menu {
+    display: flex;
+    flex-flow: row nowrap; /* En fila y sin saltos de línea */
+    height: 100px;
+    align-items: center; /* Centrar verticalmente */
+    --padding-container: 0; /* Quitamos el padding extra solo para el menú */
+}
