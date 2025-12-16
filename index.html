@@ -3,37 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postfolio de actividades</title>
+    <title>Portafolio de actividades</title>
     <link rel="stylesheet" href="./css/estilo.css" />
 </head>
 <body>
-  <h1>Portafolio de Juan Carlos Márquez</h1>
-  <img src="./IMG/Sin título.jpeg" 
-   alt="Desarollador web mirando una pantalla con iconos de html"
-   title="Desarrollador web"
-   width="150"
-   />
-<h2>2º SMR-B. Introducción al desarrollo web.</h2>1>
-<p>Aquí puedes consu1tar todas las actividades del curso.>
-    
-<h2>Actividades HTML</h2>
-    
-<ul>
-    <li><a href="./HTML/Actividad 1/actividad 1.html"> Actividades 1</a></li>
-    <li><a href="./HTML/Actividad 2/index.html"> Actividades 2</a></li>
-    <li><a href="./HTML/Actividad 3/actividad3.html"> Actividades 3</a></li>
-    <li><a href="./HTML/Actividad 4/noticias_texto.html"> Actividades 4</a></li>
-    <li><a href="./HTML/Actividad 5/Actividad5.html"> Actividades 5</a></li>
-    <li><a href="./HTML/Actividad 6"> Actividades 6</a></li>
-</ul>
+    <header class="site-header container">
+        <div class="brand">Juan Carlos Márquez</div>
+        <nav class="muted">Portafolio · 2º SMR-B</nav>
+    </header>
 
-<h2>Actividades CSS</h2>
+    <main class="container mt-2">
+        <section class="card">
+            <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+                <img class="avatar" src="./IMG/Sin título.jpeg" 
+                         alt="Desarrollador web mirando una pantalla con iconos de html"
+                         title="Desarrollador web" width="120" />
+                <div>
+                    <h1>Portafolio de Juan Carlos Márquez</h1>
+                    <p class="muted">2º SMR-B. Introducción al desarrollo web.</p>
+                </div>
+            </div>
+            <p>Aquí puedes consultar todas las actividades del curso.</p>
+        </section>
 
-<ul>
-    <li><a href="./CSS_Actividades/actividad1-css/actividad 1-css.html">Actividad 1 CSS</a></li>
-    <li><a href="./CSS_Actividades/actividad2-css/css/CSS_Actividad2.html">Actividad 2 CSS</a></li>
-    <li><a href="./CSS_Actividades/actividad3-css/festival.html">Actividad 3 CSS</a></li>
-</ul>
+        <section class="mt-2">
+            <h2>Actividades HTML</h2>
+            <ul class="grid grid-2">
+                <li><a class="btn" href="./HTML/Actividad 1/actividad 1.html">Actividad 1</a></li>
+                <li><a class="btn" href="./HTML/Actividad 2/index.html">Actividad 2</a></li>
+                <li><a class="btn" href="./HTML/Actividad 3/actividad3.html">Actividad 3</a></li>
+                <li><a class="btn" href="./HTML/Actividad 4/noticias_texto.html">Actividad 4</a></li>
+                <li><a class="btn" href="./HTML/Actividad 5/Actividad5.html">Actividad 5</a></li>
+                <li><a class="btn" href="./HTML/Actividad 6">Actividad 6</a></li>
+            </ul>
+        </section>
 
+        <section class="mt-2">
+            <h2>Actividades CSS</h2>
+            <ul class="grid grid-2">
+                <li><a class="btn" href="./CSS_Actividades/actividad1-css/actividad 1-css.html">Actividad 1 CSS</a></li>
+                <li><a class="btn" href="./CSS_Actividades/actividad2-css/css/CSS_Actividad2.html">Actividad 2 CSS</a></li>
+                <li><a class="btn" href="./CSS_Actividades/actividad3-css/festival.html">Actividad 3 CSS</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer container text-center">
+        <hr />
+        <p class="muted">© 2025 Juan Carlos Márquez</p>
+    </footer>
 </body>
 </html>
