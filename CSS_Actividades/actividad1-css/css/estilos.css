@@ -1,6 +1,6 @@
 /*colordel documento y tipo de letra*/
 body {
-    background-color: lightgray;
+    background-color: rgb(161, 146, 146);
     font-family: Arial, sans-serif,Arial, Helvetica, sans-serif;
     margin: 10px;
 }
