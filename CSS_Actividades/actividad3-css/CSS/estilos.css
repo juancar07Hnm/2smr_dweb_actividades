@@ -1,0 +1,134 @@
+/*IMportamos fuente Audiowide de google api */
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+:root {
+    --color_fondo_principal: #f3fdbc;
+    --color_fondo_menu_nav: #f1b4b8;
+    --color_titulo: #2d07fb;
+    --color_borde_discontinuo: #ff9e26;
+    --color_fondo_borde: #fceac8;
+    --color_fondo_enlace_selec: #eeeeee;
+    --color_enlace_selec: #ff0000;
+}
+
+header, main, footer {
+    margin: 0 10px;
+}
+
+body {
+    /*Las propiedades width y heigth incluyen el borde y relleno.*/
+    box-sizing: border-box;
+    background-color: var(--color_fondo_principal);
+    width: 80%;
+
+    /*Para centrar contenedores en las página horizontalmente*/
+    text-align: center;
+}
+header h1 {
+    font-family: Audiowide;
+    color: var(--color_titulo);
+}
+
+p {
+    font-family: Arial;
+}
+
+/*Menú de navegación*/ 
+
+header nav {
+    background-color: var(--color_fondo_menu_nav);
+}
+
+header nav ul {
+    padding-left: 0px;
+    /*Cambia de relleno de bloque lista*/
+}
+
+header nav li {
+    /*Quitamos el punto de la viñeta*/
+    list-style-type: none;
+    float: left;
+    margin-left: 0;
+    padding: 16px 0px 16px 20px;
+}
+
+header nav li:hover {
+    /*Cambios de fondo y color de fuente cuando pasa el cursor por encima*/
+    background-color: var(--color_fondo_enlace_selec);
+    color: var(--color_enlace_selec);
+    transition: background-color 0.8s;
+}
+
+/*Enlaces de la barra de navegación sin subrayar*/
+header nav a {
+    /*Enlaces sin subrayar*/
+    text-decoration: none;
+}
+
+/*GEnerar un bloque invisible para cortar */
+
+header nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#destacado {
+    /*borde lineas discontinuas color naranja*/
+    border-style: dashed;
+    border-color: var(--color_borde_discontinuo);
+    padding: 10px;
+    background-color: var(--color_fondo_borde);
+}
+
+.centrado {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.caja {
+    display: inline-block;
+    border: 2px solid blue;
+    margin: 15px;
+    vertical-align: middle;
+    color: green;
+    padding: 15px;
+}
+
+.caja img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.caja p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.izquierda {
+    float: left;
+}
+
+.caja p:nth-of-type(2) {
+    clear: both;
+    padding: 5px;
+}
+
+.derecha {
+    float: right;
+    margin-right: 15px;
+}
+
+footer p:last-child {
+    font-size: italic;
+    text-align: left;
+    color: gray;
+}
+
+footer {
+    font-size: italic;
+    text-align: left;
+}
+
+aside {
+    float: right;
+}
